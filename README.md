@@ -1,2 +1,3 @@
-# bootcamp-android-kotlin
-Project base 
+# Venturus Bootcamp
+
+Código de exemplo do Bootcamp Android do Venturus
