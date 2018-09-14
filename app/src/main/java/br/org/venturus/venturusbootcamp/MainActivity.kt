@@ -1,7 +1,7 @@
 package br.org.venturus.venturusbootcamp
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 

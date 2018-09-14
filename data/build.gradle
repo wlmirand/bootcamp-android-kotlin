@@ -1,25 +1,25 @@
 apply plugin: "kotlin"
 
 dependencies {
-  implementation project(":domain")
+    implementation project(":domain")
 
-  // Kotlin
-  //noinspection DifferentStdlibGradleVersion
-  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    // Kotlin
+    //noinspection DifferentStdlibGradleVersion
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 
-  // Retrofit
-  implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
-  implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
-  implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
 
-  implementation "com.google.code.gson:gson:$gson_version"
+    implementation "com.google.code.gson:gson:$gson_version"
 
-  // OKHttp
-  implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
+    // OKHttp
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
 
-  // Koin
-  implementation "org.koin:koin-android:$koin_version"
+    // Koin
+    implementation "org.koin:koin-android:$koin_version"
 
-  // RxJava
-  implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
+    // RxJava
+    implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
 }
