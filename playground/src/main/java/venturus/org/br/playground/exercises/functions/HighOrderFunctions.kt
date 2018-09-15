@@ -16,10 +16,12 @@ fun populate(count: Int, createPersonFunc: (Int) -> Person): List<Person> {
     return people
 }
 
-fun main(args: Array<String>) {
-    val people = mutableListOf<Person>()
+private fun criaPessoa(a: Int) : Person {
+    return Person("aaa", a)
+}
 
-    TODO("Use o método populate para criar uma lista de pessoas")
+fun main(args: Array<String>) {
+    val people = populate(5, createPersonFunc = { criaPessoa(it) } )
 
     people.forEach { println(it) }
 }

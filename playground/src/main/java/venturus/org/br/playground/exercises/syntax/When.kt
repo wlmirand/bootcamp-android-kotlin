@@ -19,5 +19,17 @@ fun main(args: Array<String>) {
         Country("South Korea", Continent.ASIA)
     )
 
-    TODO("Imprimir o nome dos países em inglês e o nome dos continentes em português")
+    //TODO("Imprimir o nome dos países em inglês e o nome dos continentes em português")
+    countries.forEach {
+        val con = when(it.continent) {
+            Continent.AFRICA -> "Africa"
+            Continent.SOUTH_AMERICA -> "America do Sul"
+            Continent.ANTARCTICA -> "Antartida"
+            Continent.ASIA -> "Asia"
+            Continent.EUROPE -> "Europa"
+            Continent.NORTH_AMERICA -> "America do Norte"
+            Continent.OCEANIA -> "Oceania"
+        }
+        println("${it.name} - ${con}")
+    }
 }

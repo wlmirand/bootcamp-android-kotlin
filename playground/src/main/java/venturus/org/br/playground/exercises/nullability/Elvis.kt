@@ -7,7 +7,8 @@ data class RadioStation(
 
     val preferableName: String
         get() {
-            TODO("Retornar nickname se existir, senão retornar name se existir, senão retornar 'Desconhecido'")
+            //TODO("Retornar nickname se existir, senão retornar name se existir, senão retornar 'Desconhecido'")
+            return nickname ?: name ?: "Desconhecido"
         }
 }
 

@@ -31,10 +31,16 @@ class Scientist {
         var scienceCalculus = 0
 
         //TODO Refatore este bloco de código com o 'let' para evitar chamar `!!`
+        calculator?.let {
+            scienceCalculus += it.calculate()
+            scienceCalculus += it.recalculate()
+        }
+        /*
         if (calculator != null) {
             scienceCalculus = calculator!!.calculate()
             scienceCalculus += calculator!!.recalculate()
         }
+        */
 
         println("EUREKA!!!! $scienceCalculus")
 
@@ -44,8 +50,17 @@ class Scientist {
 
 fun main(args: Array<String>) {
     //TODO Refatore este bloco de código com o 'apply' ou 'with' para evitar chamar scientist repetidamente
-    val scientist = Scientist()
-    scientist.calculator = Calculator()
-    scientist.pencil = Pencil()
+    val scientist = Scientist().apply {
+        calculator = Calculator()
+        pencil = Pencil()
+        //makeScience()
+    }
     scientist.makeScience()
+
+    val scientist2 = with(Scientist()) {
+        calculator = Calculator()
+        pencil = Pencil()
+        makeScience()
+        //this
+    }
 }

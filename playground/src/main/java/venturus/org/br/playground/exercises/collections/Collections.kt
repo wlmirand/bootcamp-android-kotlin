@@ -13,5 +13,15 @@ fun main(args: Array<String>) {
         Person("Enzo", 5),
         Person("Fausto", 30)
     )
-    TODO("Imprimir o nome de todas pessoas com idade suficiente para se aposentar. Use Retirement.java")
+    //TODO("Imprimir o nome de todas pessoas com idade suficiente para se aposentar. Use Retirement.java")
+    var r = Retirement()
+
+    /*
+    pessoas.forEach {pers ->
+        if (r.canRetire(pers)) {
+            println(pers)
+        }
+    }*/
+
+    println(pessoas.filter { r.canRetire(it) }.map { it.name })
 }
